@@ -1,488 +1,1004 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-// See https://aka.ms/new-console-template for more information
 
-// Q:讀入兩個數x和y，選出大的那一個。
+// Q: 導入五個整數，求這五個整數的和
 
-//double x, y;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入y");
-//y = Convert.ToDouble(Console.ReadLine());
-
-//if (x > y)
-//{
-//    Console.WriteLine($"x:{x} > y{y}");
+//int sum = 0;
+//for (int i = 0; i < 5; i++) {
+//    int input;
+//    Console.WriteLine($"請輸入變數{i+1}");
+//       input = Convert.ToInt32(Console.ReadLine());
+//    sum += input;
 //}
-//else if (x < y)
+//Console.WriteLine($"總和是：{sum}");
+//Console.ReadKey();
+
+// Q: 導入五個整數，求這五個整數的和 (While寫法)
+
+//int times = 0;
+//int sum = 0;
+//while (times < 5) {
+//    int cur;
+//    Console.WriteLine($"請輸入變數{times+1}");
+//    times++;
+
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    sum += cur;
+//}
+//Console.WriteLine($"總和是:{sum}");
+//Console.ReadKey();
+
+
+// Q: 求N個整數和，N由使用者輸入
+
+//int total;
+//int sum = 0;
+//Console.WriteLine("請輸入總數量");
+//total = Convert.ToInt32(Console.ReadLine());
+//for (int i = 0; i < total; i++) {
+//    int cur;
+//    Console.WriteLine($"請輸入數值{i+1}");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    sum += cur;
+//}
+//Console.WriteLine($"結果為{sum}");
+//Console.ReadKey();
+
+// Q: 求N個整數和，N由使用者輸入 (While寫法)
+
+//int total;
+//Console.WriteLine($"請輸入總數量：");
+//total = Convert.ToInt32(Console.ReadLine());
+//int i = 0;
+//int sum = 0;
+//while (i < total) {
+//    int cur;
+//    Console.WriteLine($"請輸入數值{i+1}");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    i++;
+//    sum += cur;
+//}
+//Console.WriteLine($"結果為{sum}");
+//Console.ReadKey();
+
+// Q: 假設有N個正整數，求其中的最大值。
+
+//int total;
+//int max;
+//Console.WriteLine("請輸入總數量：");
+//total = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入數值1");
+//max = Convert.ToInt32(Console.ReadLine());
+//for (int i = 1; i < total; i++) {
+//    Console.WriteLine($"請輸入數值{i+1}");
+//    int cur;
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (cur > max) {
+//        max = cur;
+//    }
+//}
+//Console.WriteLine($"最大值是{max}");
+//Console.ReadLine();
+
+// Q: 假設有N個正整數，求其中的最大值。(While寫法)
+
+//int total;
+//int max;
+//Console.WriteLine("請輸入總數量：");
+//total = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入數值1");
+//max = Convert.ToInt32(Console.ReadLine());
+//int time = 1;
+//while (time < total) {
+//    int cur;
+//    Console.WriteLine($"請輸入數值{time+1}");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    time++;
+//    if (cur > max) {
+//        max = cur;
+//    }
+//}
+//Console.WriteLine($"最大值為{max}");
+
+
+// Q:Nested loop (9X9)
+//for (int i = 1; i < 10; i++) {
+//    for (int j = 1; j < 10; j++) {
+//        Console.WriteLine($"{i}*{j}為{i*j}");
+//    }
+//}
+
+
+// 假設有N個正整數，求最大奇數值
+//int total;
+//int max;
+//Console.WriteLine("請輸入總數量：");
+//total = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入數值1");
+//max = Convert.ToInt32(Console.ReadLine());
+//if (max % 2 == 0) {
+//    max = 0;
+//}
+//for (int i = 1; i < total; i++) {
+//    int cur;
+//    Console.WriteLine($"請輸入數值{i + 1}");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    // Check if cur value if odd or even
+//    if (cur % 2 == 1) {
+//        if (cur > max) {
+//            max = cur;
+//        }
+//    }
+//}
+
+//Console.WriteLine($"最大奇數為{max}");
+//Console.ReadKey();
+
+// 假設有N個正整數，求最大奇數值 (While語法)
+
+//int total;
+//int max;
+//int time = 1;
+//Console.WriteLine("請輸入總數量：");
+//total = Convert.ToInt32(Console.ReadLine());
+////輸入數值1，若為偶數則max為0
+//Console.WriteLine("請輸入數值1");
+//max = Convert.ToInt32(Console.ReadLine());
+//if (max % 2 == 0)
 //{
-//    Console.WriteLine($"y {y} > x{x}");
+//    max = 0;
+//}
+
+//while (time < total) {
+//    int cur;
+
+//    Console.WriteLine($"請輸入數值{time+1}");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    time++;
+//    // Check if cur value if odd or even
+//    if (cur % 2 == 1)
+//    {
+//        if (cur > max)
+//        {
+//            max = cur;
+//        }
+//    }
+
+//}
+//Console.WriteLine($"最大奇數為{max}");
+//Console.ReadKey();
+
+// Q: 求N階層，即求1￼2￼3￼…￼N。
+
+//int answer = 1;
+//int maxLevel;
+
+//Console.WriteLine("請輸入階層數");
+//maxLevel = Convert.ToInt32(Console.ReadLine());
+//for (int i = 1; i <= maxLevel; i++) {
+//    answer *= i;
+//}
+//Console.WriteLine($"結果為{answer}");
+
+// Q: 求N階層，即求1￼2￼3￼…￼N。 (While寫法)
+
+//int answer = 1;
+//int maxLevel;
+//int time = 1;
+
+//Console.WriteLine("請輸入階層數");
+//maxLevel = Convert.ToInt32(Console.ReadLine());
+//while(time <= maxLevel)
+//{
+//    answer *= time;
+//    time++;
+//}
+//Console.WriteLine($"結果為{answer}");
+
+// Q: 輸出一個九九乘法表。
+
+//Console.WriteLine("開始輸出99乘法表");
+//for (int i = 1; i < 10; i++) {
+//    for (int j = 1; j < 10; j++)
+//    {
+//        Console.WriteLine($"{i} * {j} : {i*j}");
+//    }
+//}
+//Console.ReadKey();
+
+// Q: 輸出一個九九乘法表。 (While寫法)
+
+//Console.WriteLine("開始輸出99乘法表");
+//int innerLoop = 1;
+//int outerLoop = 1;
+//while (outerLoop < 10) {
+//    while (innerLoop < 10) {
+//        Console.WriteLine($"{outerLoop} * {innerLoop} : {outerLoop*innerLoop} ");
+//        innerLoop++;
+
+//    }
+//    innerLoop = 1;
+//    outerLoop++;
+//}
+
+
+//Q: 輸出一個九九乘法表。（矩陣輸出形式）
+
+//for (int i = 1; i < 10; i += 3)
+//{
+//    for (int j = 1; j < 10; j++)
+//    {
+//        for (int k = 0; k < 3; k++)
+//        {
+//            Console.Write($"{i + k} * {j} : {(i + k) * j}\t");
+//        }
+//        Console.WriteLine();
+//    }
+
+//    Console.WriteLine();
+//}
+
+//Console.ReadKey();
+
+//Q: 輸出一個九九乘法表。（矩陣輸出形式 - While語法）
+
+//int i = 1;
+//int j = 1;
+//int k = 0;
+//while (i < 10)
+//{
+
+//    while (j < 10)
+//    {
+//        while (k < 3)
+//        {
+//            Console.Write($"{i + k} * {j} : {(i + k) * j}\t");
+//            k++;
+//        }
+//        Console.WriteLine();
+//        k = 0;
+//        j++;
+//    }
+//    j = 1;
+//    Console.WriteLine();
+//    i += 3;
+//}
+
+
+// Q: 3-1.寫一程式，輸入10個整數，求其最小值。
+
+//int min;
+//Console.WriteLine("請輸入整數");
+//min = Convert.ToInt32(Console.ReadLine());
+
+//for (int i = 0; i < 9; i++)
+//{
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (min > cur) {
+//        min = cur;
+//    }
+//}
+//Console.WriteLine($"最小整數{min}");
+//Console.ReadKey();
+
+// Q: 3-1.寫一程式，輸入10個整數，求其最小值。(While寫法)
+
+//int min;
+//Console.WriteLine("請輸入整數");
+//min = Convert.ToInt32(Console.ReadLine());
+//int i = 1;
+//while (i < 10){
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    i++;
+//    if (cur < min) {
+//        min = cur;
+//    }
+//}
+//Console.WriteLine($"最小數值為{min}");
+
+
+
+
+
+//Q: 3 - 2.寫一程式，輸入N個整數，求其最小值。
+
+//int number;
+//Console.WriteLine("請輸入處理整數數量");
+//number = Convert.ToInt32(Console.ReadLine());
+//int min;
+//Console.WriteLine("請輸入整數");
+//min = Convert.ToInt32(Console.ReadLine());
+
+//for (int i = 0; i < number-1; i++)
+//{
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (min > cur)
+//    {
+//        min = cur;
+//    }
+//}
+//Console.WriteLine($"最小整數{min}");
+//Console.ReadKey();
+
+
+//Q: 3 - 2.寫一程式，輸入N個整數，求其最小值。(While寫法)
+
+//int number;
+//Console.WriteLine("請輸入處理整數數量");
+//number = Convert.ToInt32(Console.ReadLine());
+//int min;
+//Console.WriteLine("請輸入整數");
+//min = Convert.ToInt32(Console.ReadLine());
+//int i = 1;
+//while (i < number)
+//{
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    i++;
+//    if (cur < min)
+//    {
+//        min = cur;
+//    }
+//}
+//Console.WriteLine($"最小數值為{min}");
+
+
+
+
+// Q: 3-3.寫一程式，輸入10個整數，列出其中所有大於12的數字。
+
+//int min = 12;
+//string answer = " ";
+//for (int i = 0; i < 10; i++)
+//{
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (cur > min)
+//    {
+//        answer += cur.ToString()+ " ";
+//    }
+//}
+//Console.WriteLine($"{answer}");
+//Console.ReadKey();
+
+// Q: 3-3.寫一程式，輸入10個整數，列出其中所有大於12的數字。 （While寫法）
+
+//int min = 12;
+//string answer = " ";
+//int index = 0;
+//while (index < 10) {
+//    index++;
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (cur > min)
+//    {
+//        answer += cur.ToString() + " ";
+//    }
+//}
+
+//Console.WriteLine($"{answer}");
+//Console.ReadKey();
+
+
+
+
+
+// Q: 3-4.寫一程式，輸入10個整數，列出其中所有大於12的數字的總和。
+
+//int sum = 0;
+//int min = 12;
+//for (int i = 0; i < 10; i++)
+//{
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (cur > min)
+//    {
+//        sum += cur;
+//    }
+//}
+//Console.WriteLine($"所有大於12的數字的總和: {sum}");
+//Console.ReadKey();
+
+// Q: 3-4.寫一程式，輸入10個整數，列出其中所有大於12的數字的總和。(While寫法)
+
+//int min = 12;
+//int index = 0;
+//int sum = 0;
+//while (index < 10)
+//{
+//    index++;
+//    int cur;
+//    Console.WriteLine("請輸入整數");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (cur > min)
+//    {
+//        sum += cur;
+//    }
+//}
+
+//Console.WriteLine($"所有大於12的數字的總和: {sum}");
+//Console.ReadKey();
+
+// 3-5.寫一程式，輸入N個數字，求其所有奇數中的最大值。例如輸入11,12,3,24,15，答案是15。
+
+//先判斷奇數，再取其中最大值
+//int num;
+//Console.WriteLine("請設定處理數字數量：");
+//num = Convert.ToInt32(Console.ReadLine());
+//int max = int.MinValue;
+
+//for (int i = 0; i < num; i++)
+//{
+//    int cur;
+//    Console.WriteLine("請輸入數字");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    if (cur % 2 != 0)
+//    {
+//        if (cur > max)
+//        {
+//            max = cur;
+//        }
+//    }
+//}
+//if (max == int.MinValue)
+//{
+//    Console.WriteLine("未輸入奇數");
 //}
 //else
 //{
-//    Console.WriteLine("兩者相同");
+//    Console.WriteLine($"最大奇數為{max}");
 //}
 
-// Q:讀入x和y，如果x>y，則回傳x-y，否則回傳y-x。
+// 3-5.寫一程式，輸入N個數字，求其所有奇數中的最大值。例如輸入11,12,3,24,15，答案是15。(While寫法)
 
-//double x, y, z;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入y");
-//y = Convert.ToDouble(Console.ReadLine());
-
-//if (x > y)
-//{
-//    Console.WriteLine($"z: {x - y}");
+//int num;
+//Console.WriteLine("請設定處理數字數量：");
+//num = Convert.ToInt32(Console.ReadLine());
+//int max = int.MinValue;
+//int time = 0;
+//while (time < num) {
+//    int cur;
+//    Console.WriteLine("請輸入數字");
+//    cur = Convert.ToInt32(Console.ReadLine());
+//    time++;
+//    if (cur % 2 != 0)
+//    {
+//        if (cur > max)
+//        {
+//            max = cur;
+//        }
+//    }
 //}
 
-//else
+//if (max == int.MinValue)
 //{
-//    Console.WriteLine($"z : {y - x}");
-//}
-
-// Q:讀入一數字，如果是負數，就將它轉成正數。
-
-//double x;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-
-
-//if (x < 0)
-//{
-//    x = Math.Abs(x);
-//    Console.WriteLine($"x: {x}");
-//}
-
-//else
-//{
-//    Console.WriteLine($"{x}");
-//}
-
-//  Q:輸入一個學生的分數，輸出該成績級別，分數級別如下：
-//  90分以上: A
-//  80~89分: B
-//  70~79分: C
-//  60~69分: D
-//  60分以下: F
-
-//int x;
-//Console.WriteLine("請輸入學生分數:x");
-//x = Convert.ToInt32(Console.ReadLine());
-//if (x >= 90)
-//{
-//    Console.WriteLine("Ａ");
-//}
-//else if (80 <= x && x >= 89)
-//{
-//    Console.WriteLine("B");
-//}
-//else if (70 <= x && 79 >= x)
-//{
-//    Console.WriteLine("C");
-//}
-//else if (60 <= x && 69 >= x)
-//{
-//    Console.WriteLine("D");
+//    Console.WriteLine("未輸入奇數");
 //}
 //else
 //{
-//    Console.WriteLine("F");
+//    Console.WriteLine($"最大奇數為{max}");
 //}
 
-// 使用switch改寫
+// Q;寫一程式，輸入N個數字，求其所有正數之平方的加總。
 
-//int x;
-//Console.WriteLine("請輸入學生分數:x");
-//x = Convert.ToInt32(Console.ReadLine());
-//switch (x)
+//int num;
+//double cur;
+//double sum = 0;
+//Console.WriteLine("請輸入處理數字數量：");
+//num = Convert.ToInt32(Console.ReadLine());
+//for (int i = 0; i < num; i++)
 //{
-//    case >= 90:
 
-//        Console.WriteLine("Ａ");
+//    Console.WriteLine($"請輸入數字{i+1}：");
+//    cur = Convert.ToDouble(Console.ReadLine());
+//    if (cur > 0) {
+//        sum += Math.Pow(cur, 2);
+//    }
+//}
+//Console.WriteLine($"總合為：{sum}");
+
+
+// Q;寫一程式，輸入N個數字，求其所有正數之平方的加總。 Pg 46. (While語法)
+
+//int num;
+//double cur;
+//double sum = 0;
+//int time = 0;
+//Console.WriteLine("請輸入處理數字數量：");
+//num = Convert.ToInt32(Console.ReadLine());
+//while (time < num) {
+//    Console.WriteLine($"請輸入數字{time + 1}：");
+//    cur = Convert.ToDouble(Console.ReadLine());
+//    time++;
+//    if (cur > 0)
+//    {
+//        sum += Math.Pow(cur, 2);
+//    }
+//}
+
+//Console.WriteLine($"總合為：{sum}");
+
+
+//Q: 寫一程式，輸入N個數字，其中有些是負數，將這些負數轉換成正數
+
+//int num;
+//double cur;
+//string ans = "";
+//Console.WriteLine("請輸入處理數字數量：");
+//num = Convert.ToInt32(Console.ReadLine());
+//for (int i = 0; i < num; i++)
+//{
+
+//    Console.WriteLine($"請輸入數字{i + 1}：");
+//    cur = Convert.ToDouble(Console.ReadLine());
+//    if (cur < 0)
+//    {
+//        ans += " " + Convert.ToString(-cur);
+//    }
+//    else {
+//        ans += " "+Convert.ToString(cur);
+//    }
+//}
+//Console.WriteLine($"處理後結果為：{ans}");
+
+//Q: 寫一程式，輸入N個數字，其中有些是負數，將這些負數轉換成正數(While語法)
+
+//int num;
+//double cur;
+//string ans = "";
+//int time = 0;
+//Console.WriteLine("請輸入處理數字數量：");
+//num = Convert.ToInt32(Console.ReadLine());
+//while (time < num) {
+//    Console.WriteLine($"請輸入數字{time + 1}：");
+//    cur = Convert.ToDouble(Console.ReadLine());
+//    time++;
+//    if (cur < 0)
+//    {
+//        ans += " " + Convert.ToString(-cur);
+//    }
+//    else
+//    {
+//        ans += " " + Convert.ToString(cur);
+//    }
+
+//}
+
+//Console.WriteLine($"處理後結果為：{ans}");
+
+// Q:判斷101-200之間有多少個質數，並輸出所有質數
+
+/* 邏輯： 
+ 1.  <= 1不算質數
+ 2. 使用for loop查看，若從2 ~ 平方根(最大公約數)都無整數可整除，即可判斷為質數
+	2-1. 使用break，因只要可被整除即可判定為非質數，減少不必要檢查導致降低效能
+ */
+
+//int lower;
+//int upper;
+//Console.WriteLine("請輸入下限");
+//lower = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入上限");
+//upper = Convert.ToInt32(Console.ReadLine());
+//int sumPrimeNumber = 0;
+////
+//bool isPrime = true;
+//string eachPrime = "";
+//for (int i = lower; i <= upper; i++)
+//{
+//    if (i >= 2) {
+//        for (int j = 2; j <= Math.Floor(Math.Sqrt(i)); j++)
+//        {
+//            if (i % j == 0)
+//            {
+//                isPrime = false;
+//                break;
+
+//            }
+//        }
+//        if (isPrime)
+//        {
+//            sumPrimeNumber++;
+//            eachPrime += $"{i} ";
+//        }
+
+//    }
+//}
+//Console.WriteLine($"個別質數為：{eachPrime}");
+//Console.WriteLine($"總共的質數為{sumPrimeNumber}");
+
+// Q:判斷101-200之間有多少個質數，並輸出所有質數(While寫法)
+
+// 重點在reset
+
+//int lower;
+//int upper;
+//Console.WriteLine("請輸入下限");
+//lower = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入上限");
+//upper = Convert.ToInt32(Console.ReadLine());
+//int sumPrimeNumber = 0;
+////
+//bool isPrime = true;
+//string eachPrime = "";
+
+//while (lower <= upper) {
+//    int checkedNumber = 2;
+//    isPrime = true;
+
+
+//    if (lower >= 2) {
+
+//        while (checkedNumber <= Math.Sqrt(lower)) {
+//            if (lower % checkedNumber == 0) {
+//                isPrime = false;
+//                break;
+//            }
+//            checkedNumber++;
+
+//        }
+//        if (isPrime) {
+//            sumPrimeNumber++;
+//            eachPrime += $"{lower} ";
+
+//        }
+//    }
+//    lower++;
+
+//}
+//Console.WriteLine($"個別質數為：{eachPrime}");
+//Console.WriteLine($"總共的質數為{sumPrimeNumber}");
+
+
+// Q:輸入一個數，輸出其質因數
+//int input;
+//Console.WriteLine("請輸入數值");
+//input = Convert.ToInt32(Console.ReadLine());
+//string ans = "";
+//bool isPrime = true;
+
+
+//for (int i = 2; i <= input; i++)
+//{
+//    if (input % i == 0) {
+//        // 查看因數是否為質數
+//        for (int j = 2; j <= Math.Sqrt(i); j++)
+//        {
+//            isPrime = true;
+//            if (i % j == 0) {
+//                isPrime = false;
+//                break;
+//            }
+//        }
+//        if (isPrime) {      
+//            ans += $"{i} ";
+//        }
+//    }
+//}
+//Console.WriteLine($"質因數有: {ans}");
+
+// Q:輸入一個數，輸出其質因數(While寫法)
+
+//int input;
+//Console.WriteLine("請輸入數值");
+//input = Convert.ToInt32(Console.ReadLine());
+//string ans = "";
+//bool isPrime = true;
+//int time = 2;
+//int checkedTime = 2;
+
+//while (time <= input) {
+//    //查看是否為因數
+//    if (input % time == 0) {
+//        // 查看是否為質數
+//        checkedTime = 2;
+//        while (checkedTime <= Math.Sqrt(time)){
+//            isPrime = true;
+//            if (time % checkedTime == 0) {
+//                isPrime = false;
+//                break;
+//            }
+//            checkedTime++;
+//        }
+//        if (isPrime) {
+//            ans += $"{time} ";
+//        }
+//    }
+//    time++;
+//}
+
+//Console.WriteLine($"質因數有: {ans}");
+
+
+// Q:求100到300中可以被3與7整除的個數。
+
+//int upper;
+//int lower;
+//Console.WriteLine("請輸入範圍下限");
+//lower = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入範圍上限");
+//upper = Convert.ToInt32(Console.ReadLine());
+//int number = 0;
+//string ans = "";
+
+//for (int i = lower; i <= upper; i++)
+//{
+//    if (i % 3 == 0 )
+//    {
+//        number++;
+//        ans += $"{i} ";
+//    }
+//    else if (i % 7 == 0) {
+//        number++;
+//        ans += $"{i} ";
+//    }
+//}
+//Console.WriteLine(ans);
+//Console.WriteLine($"總數有：{number}");
+
+
+
+
+// Q:求100到300中可以被3與7整除的個數。(While寫法)
+
+//int upper;
+//int lower;
+//Console.WriteLine("請輸入範圍下限");
+//lower = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入範圍上限");
+//upper = Convert.ToInt32(Console.ReadLine());
+//int number = 0;
+//string ans = "";
+
+//while (lower <= upper) {
+//	if (lower % 3 == 0)
+//	{
+//		number++;
+//		ans += $"{lower} ";
+//	}
+//	else if (lower % 7 == 0) {
+//		number++;
+//		ans += $"{lower} ";
+//	}
+//	lower++;
+//}
+//Console.WriteLine(ans);
+//Console.WriteLine($"總數有：{number}");
+
+// Q:Ch4. 輸入2個數，求最大公約數 Pg69.
+
+//int number1;
+//int number2;
+//Console.WriteLine("請輸入數字1:");
+//number1 = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入數字2:");
+//number2 = Convert.ToInt32(Console.ReadLine());
+//int maxCommon = 1;
+//// 因數 --> 公因數 --> 最大公因數
+//for (int i = 1; i <= number1; i++)
+//{
+//	// 查看是否為因數
+//	if (number1 % i == 0) {
+//		if (number2 % i == 0) {
+//			if (i > maxCommon) {
+//				maxCommon = i;
+//			}
+//		}
+//	}
+//}
+//Console.WriteLine($"最大公因數為：{maxCommon}");
+
+// Q:Ch4. 輸入2個數，求最大公約數 (While寫法)
+//int number1;
+//int number2;
+//Console.WriteLine("請輸入數字1:");
+//number1 = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入數字2:");
+//number2 = Convert.ToInt32(Console.ReadLine());
+//int maxCommon = 1;
+//int time = 1;
+//// 因數 --> 公因數 --> 最大公因數
+
+//while (time <= number1)
+//{
+//    // 查看是否為因數
+//    if (number1 % time == 0)
+//    {
+//        if (number2 % time == 0)
+//        {
+//            if (time > maxCommon)
+//            {
+//                maxCommon = time;
+//            }
+//        }
+//    }
+//    time++;
+//}
+
+//Console.WriteLine($"最大公因數為：{maxCommon}");
+
+// Q: 利用while寫一程式求N個數字的最大值
+
+//int number;
+//int time = 2;
+//double max;
+//Console.WriteLine("請輸入處理數字數量");
+//number = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入數字1");
+//max = Convert.ToDouble(Console.ReadLine());
+//double cur;
+//while (time <= number) {
+//	Console.WriteLine($"請輸入數字{time}");
+//	cur = Convert.ToDouble(Console.ReadLine());
+//	if (cur > max) {
+//		max = cur;
+//	}
+//	time++;
+//}
+//Console.WriteLine($"最大值{max}");
+
+// Q: 利用while寫一程式求一個等差級數數字的和，一共有N個數字，
+
+//double init;
+//double difference;
+//int number;
+//double max;
+//double sum = 0;
+//Console.WriteLine("請輸入初始值");
+//init = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("請輸入數字數量");
+//number = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("請輸入差值");
+//difference = Convert.ToDouble(Console.ReadLine());
+//max = init + (number - 1) * difference;
+//while (init <= max)
+//{
+//    sum += init;
+//    init += difference;
+//}
+//Console.WriteLine($"等差級數合為：{sum}");
+
+
+
+// Q: 利用while寫一程式，讀入N個數字，然後找出所有小於13的數，再求這些數字的和
+
+//int number;
+//Console.WriteLine("請輸入數字數量");
+//number = Convert.ToInt32(Console.ReadLine());
+//int time = 1;
+//double sum = 0;
+//double cur;
+//while (time <= number) {
+//	Console.WriteLine($"請輸入數字{time}");
+//	cur = Convert.ToDouble(Console.ReadLine());
+//	if (cur < 13) {
+//		sum += cur;
+//	}
+//	time++;
+//}
+//Console.WriteLine($"總和是：{sum}");
+
+// Q: 用while，讀入N個數字，找到第一個大於7而小於10的數字就停止，而且印出這個數字。
+
+//int number;
+//Console.WriteLine("請輸入數字數量");
+//number = Convert.ToInt32(Console.ReadLine());
+//int time = 1;
+//double cur;
+//while (time <= number)
+//{
+//    Console.WriteLine($"請輸入數字{time}");
+//    cur = Convert.ToDouble(Console.ReadLine());
+//    if (cur > 7 && cur < 10)
+//    {
+//        Console.WriteLine($"符合區間數值：{cur}");
 //        break;
+//    }
+//    time++;
+//}
+//if (time > number)
+//{
+//    Console.WriteLine("沒有數值符合區間");
+//}
 
-//    case >= 80:
+// Q;用while，讀入a1~a5和b1~b5。找到第一個ai>bi，即停止，並列印出ai及bi。
 
-//        Console.WriteLine("B");
+//int time = 1;
+//double aCur;
+//double bCur;
+//while (time <= 5) {
+//	Console.WriteLine($"請輸入a{time}");
+//	aCur = Convert.ToDouble(Console.ReadLine());
+//    Console.WriteLine($"請輸入b{time}");
+//    bCur = Convert.ToDouble(Console.ReadLine());
+//	if (aCur > bCur) {
+//		Console.WriteLine($"a{time}:{aCur}大於b{time}:{bCur}");
+//		break;
+//	}
+//	time++;
+//}
+//if (time > 5) {
+//	Console.WriteLine("沒有任何ai>bi情形");
+//}
+
+// Q:Eric覺得麥蒂勞的39元漢堡實在太便宜、太好吃了，因此他
+// 決定晚餐要把口袋裡所有錢通通拿來吃39元漢堡。
+// 假設他每5分鐘就能吃一個漢堡，請隨意輸入一個時間，輸出這段時間吃漢堡的紀錄。
+
+//Console.WriteLine("請輸入預計吃漢堡時間(分鐘)：");
+//double timePeriod = Convert.ToDouble(Console.ReadLine());
+//int timeEat = 1;
+//for (int i = 0; i <= timePeriod; i+=5)
+//{
+//	Console.WriteLine($"Eric於{i}分鐘時吃第{timeEat}次『39元』漢堡");
+//	timeEat++;
+//}
+
+// Q:小明貸款買房花560萬，每個月可還4萬，
+// 每還12個月，因為年終獎金可以多還一萬，請問需要幾個月還清
+
+//int loanPaymentTime = 0;
+//int loanTotal = 560;
+//int loanPayment = 4;
+//int times = 0;
+
+//for (int i = 0; 0 < loanTotal; i++)
+//{
+//	loanTotal -= loanPayment;
+//	times++;
+//    loanPaymentTime++;
+//	if (loanPaymentTime % 12 == 0) {
+//		loanPayment++;
+//	}
+//}
+//Console.WriteLine($"小明於第{times}次還清房貸");
+
+// Q:系統隨機產生一個數字，讓使用者數入數字，直到猜中才離開程式！
+// 需提示是比較大還是比較小
+
+////使用random class
+//Random rnd = new Random();
+//int randomNumber = rnd.Next(1, 100);
+//int userinput;
+
+//////由於不確定運作次數，使用while loop
+//////怕userinput剛好等於randomNumber因此使用do while loop
+
+//do
+//{
+//    Console.WriteLine("");
+//    Console.WriteLine("請輸入數字1~100");
+//    userinput = Convert.ToInt32(Console.ReadLine());
+//    if (userinput == randomNumber)
+//    {
+//        Console.WriteLine($"答案為{randomNumber}");
 //        break;
-
-//    case >= 70:
-
-//        Console.WriteLine("C");
-//        break;
-
-//    case >= 60:
-
-//        Console.WriteLine("D");
-//        break;
-//    default:
-//        Console.WriteLine("F");
-//        break;
-
-//}
-
-
-// Q:某商店在大特價，根據購買的商品總金額決定打折的折扣，總金額越高折扣越多，折扣表如下：
-//    未滿1000 : 無折扣
-//    1000~4999 : 9折
-//    5000~9999 : 8折
-//    高於10000 : 7折
-//    小數點四捨五入，印出折扣後的金額。
-
-//double p;
-//Console.WriteLine("請輸入總金額");
-//p = Convert.ToDouble(Console.ReadLine());
-
-//if (p < 1000)
-//{
-//    Console.WriteLine($"總價格:{p}");
-//}
-//else if (1000 <= p && p <= 4999)
-//{
-//    p = Math.Round(p * 0.9);
-//    Console.WriteLine($"總價格:{p}");
-//}
-//else if (5000 <= p && p <= 9999)
-//{
-//    p = Math.Round(p * 0.8);
-//    Console.WriteLine($"總價格:{p}");
-//}
-//else
-//{
-//    p = Math.Round(p * 0.7);
-//    Console.WriteLine($"總價格:{p}");
-//}
-
-
-
-// Q:輸入x和y，如果xy，則列印x，否則列印y
-
-//double x, y, z;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入y");
-//y = Convert.ToDouble(Console.ReadLine());
-
-//if (x > y)
-//{
-//    z = x;
-//    Console.WriteLine($"結果為：{z}");
-//}
-//else
-//{
-//    z = y;
-//    Console.WriteLine($"結果為：{z}");
-//}
-
-// Q:輸入x和y，如果x和y都是正數，令z=1，如兩者均為負數，令z=-1，否則令z=0
-
-//double x, y, z;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入y");
-//y = Convert.ToDouble(Console.ReadLine());
-//if (x > y)
-//{
-//    z = x - y;
-//    Console.WriteLine($"結果為：{z}");
-//}
-//else
-//{
-//    z = y - x;
-//    Console.WriteLine($"結果為：{z}");
-//}
-
-// Q:輸入x、y、u、v，如果(x+y)>(u+v)，則令z=x-y，否則令z=u-v
-
-//double x, y, u, v, z;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入y");
-//y = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入u");
-//u = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入v");
-//v = Convert.ToDouble(Console.ReadLine());
-
-//if ((x + y) > (u + v))
-//{
-//    z = x + y;
-//    Console.WriteLine($"結果為：{z}");
-//}
-//else
-//{
-//    z = u + v;
-//    Console.WriteLine($"結果為：{z}");
-//}
-
-
-// Q:輸入x、y、u、v，如果，令z=x-y，否則令z=u-v。
-
-//double x, y, u, v;
-//Console.WriteLine("請輸入數字x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入數字y");
-//y = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入數字u");
-//u = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入數字v");
-//v = Convert.ToDouble(Console.ReadLine());
-
-
-//if ((x + y) / (u - v) >= 2)
-//{
-//    Console.WriteLine($"答案為{x - y}");
-//}
-//else
-//{
-//    Console.WriteLine($"答案是{u - v}");
-//}
-
-
-
-
-// Q:輸入x和y，如果xy，令z=x2，否則令z=y^2
-
-//double x, y, z;
-//Console.WriteLine("請輸入數字x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入數字y");
-//y = Convert.ToDouble(Console.ReadLine());
-
-
-//if (x >= y)
-//{
-//    z = Math.Pow(x, 2);
-//    Console.WriteLine($"答案為{z}");
-//}
-//else
-//{
-//    z = Math.Pow(y, 2);
-//    Console.WriteLine($"答案是{z}");
-//}
-
-// Q:2-6
-//double income, rate, difference;
-//Console.WriteLine("請輸入income");
-//income = Convert.ToDouble(Console.ReadLine());
-
-//if (income > 4090000)
-//{
-//    rate = 0.4;
-//    difference = 721100;
-//    Console.WriteLine($"答案為{income * rate - difference}");
-//}
-//else if (income > 2180000)
-//{
-//    rate = 0.3;
-//    difference = 312100;
-//    Console.WriteLine($"答案為{income * rate - difference}");
-//}
-//else if (income > 1090000)
-//{
-//    rate = 0.21;
-//    difference = 115900;
-//    Console.WriteLine($"答案為{income * rate - difference}");
-//}
-//else if (income > 410000)
-//{
-//    rate = 0.13;
-//    difference = 28700;
-//    Console.WriteLine($"答案為{income * rate - difference}");
-//}
-//else
-//{
-//    rate = 0.06;
-//    difference = 0;
-//    Console.WriteLine($"答案為{income * rate - difference}");
-//}
-
-// Q:2-7
-
-//double x, y;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入y");
-//y = Convert.ToDouble(Console.ReadLine());
-//if (x > 0)
-//{
-//    if (y > 0)
-//    {
-//        Console.WriteLine("1st quadrant\n");
 //    }
-//    else if (y == 0)
+//    else if (userinput < randomNumber)
 //    {
-//        Console.WriteLine("X-axis\n");
+//        Console.WriteLine("答案比較大");
 //    }
+
 //    else
 //    {
-//        Console.WriteLine("4th quadrant\n");
-//    }
-//}
-//else if (x == 0)
-//{
-//    if (y == 0)
-//    {
-//        Console.WriteLine("Origin\n");
-//    }
-//    else
-//    {
-//        Console.WriteLine("Y-axis\n");
-//    }
-//}
-//else
-//{
-//    if (y > 0)
-//    {
-//        Console.WriteLine("2nd quadrant\n");
-//    }
-//    else if (y == 0)
-//    {
-//        Console.WriteLine("X-axis\n");
-//    }
-//    else
-//    {
-//        Console.WriteLine("3th quadrant\n");
+//        Console.WriteLine("答案比較小");
 //    }
 //}
 
-
-//Q: sagit 是一位高中電腦老師，這學期正在教學生寫C++程式。他的評分標準是依照每一位學生在 ZeroJudge 系統上解出的題數，去計算出對應的得分。規則如下：
-//答對題數在 0~10 者，每題給6分。
-//題數在 11~20 者，從第11題開始，每題給2分。(前10題還是每題給6分)
-//題數在 21~40 者，從第21題開始，每題給1分。
-//題數在 40 以上者，一律100分。
-//請輸入答對題數，輸出統計後分數
-
-//double x, y;
-//Console.WriteLine("請輸入答對題目");
-//x = Convert.ToDouble(Console.ReadLine());
-
-//if (x < 10)
-//{
-//    Console.WriteLine($"分數:{x * 10}");
-//}
-//else if (11 <= x && x <= 20)
-//{
-//    Console.WriteLine($"分數:{10 * 6 + (x - 10) * 2}");
-//}
-//else if (21 <= x && x <= 40)
-//{
-//    Console.WriteLine($"分數:{10 * 6 + 10 * 2 + (x - 20) * 1}");
-//}
-//else
-//{
-//    Console.WriteLine($"分數: 100");
-//}
-
-// Q:請輸入身高體重，輸出BMI並顯示這樣的BMI是正常還是過輕、過重。
-//double height, weight, bmi;
-//Console.WriteLine("請輸入身高(公分)");
-//height = Convert.ToDouble(Console.ReadLine());
-//height /= 100;
-//Console.WriteLine("請輸入體重(公斤)");
-//weight = Convert.ToDouble(Console.ReadLine());
-
-//bmi = weight / Math.Pow(height, 2);
-
-//if (bmi < 18.5)
-//{
-//    Console.WriteLine($"{bmi}:過輕");
-//}
-//else if (18.5 < bmi && bmi < 24)
-//{
-//    Console.WriteLine($"{bmi}:正常");
-//}
-//else
-//{
-//    Console.WriteLine($"{bmi}:過重");
-//}
+//while (userinput != randomNumber);
 
 
 
-// Q:請隨意輸入三個數，請由大到小 依序印出。
-
-//double x, y, z;
-//Console.WriteLine("請輸入x");
-//x = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入y");
-//y = Convert.ToDouble(Console.ReadLine());
-//Console.WriteLine("請輸入z");
-//z = Convert.ToDouble(Console.ReadLine());
-
-//if (x >= y && x >= z)
-//{
-//    if (y >= z)
-//    {
-//        Console.WriteLine($"{x} {y} {z}");
-//    }
-//    else
-//    {
-//        Console.WriteLine($"{x} {z} {y}");
-//    }
-//}
-//else if (y >= x && y >= z)
-//{
-//    if (x >= z)
-//    {
-//        Console.WriteLine($"{y} {x} {z}");
-//    }
-//    else
-//    {
-//        Console.WriteLine($"{y} {z} {x}");
-//    }
-//}
-//else
-//{
-//    if (x >= y)
-//    {
-//        Console.WriteLine($"{z} {x} {y}");
-//    }
-//    else
-//    {
-//        Console.WriteLine($"{z} {y} {x}");
-//    }
-//}
-
-
-//Q: 企業發放的獎金根據利潤提成。利潤低於或等於10萬元時，獎金可提10%；
-// 利潤高于10萬元，低於20萬元時，低於10萬元的部分按10%提成，高於10萬元的部分，可提成7.5%；20萬到40萬之間時，高於20萬元的部分，可提成5%；
-// 40萬到60萬之間時高於40萬元的部分，可提成3%；
-// 60萬到100萬之間時，高於60萬元的部分，可提成1.5%，高於100萬元時，超過100萬元的部分按1%提成，從鍵盤輸入當月利潤I，求應發放獎金總數？
-
-//double profit, bonus;
-//Console.WriteLine("請輸入當月利潤(萬元)");
-//profit = Convert.ToDouble(Console.ReadLine());
-
-//if (profit <= 10)
-//{
-//    bonus = profit * 0.1;
-//    Console.WriteLine($"獎金是{bonus}萬元");
-//}
-//else if (profit <= 20)
-//{
-//    bonus = 10 * 0.1 + (profit - 10) * 0.075;
-//    Console.WriteLine($"獎金是{bonus}萬元");
-//}
-//else if (profit <= 40)
-//{
-//    bonus = 10 * 0.1 + 10 * 0.075 + (profit - 20) * 0.05;
-//    Console.WriteLine($"獎金是{bonus}萬元");
-//}
-//else if (profit <= 60)
-//{
-//    bonus = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + (profit - 40) * 0.03;
-//    Console.WriteLine($"獎金是{bonus}萬元");
-//}
-//else if (profit <= 100)
-//{
-//    bonus = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + 20 * 0.03 + (profit - 60) * 0.015;
-//    Console.WriteLine($"獎金是{bonus}萬元");
-//}
-//else
-//{
-//    bonus = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + 20 * 0.03 + 40 * 0.015 + (profit - 100) * 0.01;
-//    Console.WriteLine($"獎金是{bonus}萬元");
-//}
 
