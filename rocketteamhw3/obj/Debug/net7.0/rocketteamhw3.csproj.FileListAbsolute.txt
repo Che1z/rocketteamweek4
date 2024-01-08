@@ -1,0 +1,5 @@
+/Users/shihminhung/Projects/rocketteamhw3/rocketteamhw3/obj/Debug/net7.0/rocketteamhw3.csproj.AssemblyReference.cache
+/Users/shihminhung/Projects/rocketteamhw3/rocketteamhw3/obj/Debug/net7.0/rocketteamhw3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shihminhung/Projects/rocketteamhw3/rocketteamhw3/obj/Debug/net7.0/rocketteamhw3.AssemblyInfoInputs.cache
+/Users/shihminhung/Projects/rocketteamhw3/rocketteamhw3/obj/Debug/net7.0/rocketteamhw3.AssemblyInfo.cs
+/Users/shihminhung/Projects/rocketteamhw3/rocketteamhw3/obj/Debug/net7.0/rocketteamhw3.csproj.CoreCompileInputs.cache

@@ -5,9 +5,8 @@
 
 //int sum = 0;
 //for (int i = 0; i < 5; i++) {
-//    int input;
 //    Console.WriteLine($"請輸入變數{i+1}");
-//       input = Convert.ToInt32(Console.ReadLine());
+//     int  input = Convert.ToInt32(Console.ReadLine());
 //    sum += input;
 //}
 //Console.WriteLine($"總和是：{sum}");
@@ -20,10 +19,12 @@
 //while (times < 5) {
 //    int cur;
 //    Console.WriteLine($"請輸入變數{times+1}");
-//    times++;
+
 
 //    cur = Convert.ToInt32(Console.ReadLine());
 //    sum += cur;
+// 確定一次循環內事情都做完，再進入下次循環
+//    times++;
 //}
 //Console.WriteLine($"總和是:{sum}");
 //Console.ReadKey();
@@ -124,10 +125,8 @@
 //    Console.WriteLine($"請輸入數值{i + 1}");
 //    cur = Convert.ToInt32(Console.ReadLine());
 //    // Check if cur value if odd or even
-//    if (cur % 2 == 1) {
-//        if (cur > max) {
+//    if (cur % 2 == 1 && cur > max) {
 //            max = cur;
-//        }
 //    }
 //}
 
@@ -209,15 +208,15 @@
 // Q: 輸出一個九九乘法表。 (While寫法)
 
 //Console.WriteLine("開始輸出99乘法表");
-//int innerLoop = 1;
+
 //int outerLoop = 1;
 //while (outerLoop < 10) {
+//    int innerLoop = 1;
 //    while (innerLoop < 10) {
 //        Console.WriteLine($"{outerLoop} * {innerLoop} : {outerLoop*innerLoop} ");
 //        innerLoop++;
 
 //    }
-//    innerLoop = 1;
 //    outerLoop++;
 //}
 
@@ -243,23 +242,20 @@
 //Q: 輸出一個九九乘法表。（矩陣輸出形式 - While語法）
 
 //int i = 1;
-//int j = 1;
-//int k = 0;
 //while (i < 10)
 //{
-
+//    int j = 1;
 //    while (j < 10)
 //    {
+//        int k = 0;
 //        while (k < 3)
 //        {
 //            Console.Write($"{i + k} * {j} : {(i + k) * j}\t");
 //            k++;
 //        }
 //        Console.WriteLine();
-//        k = 0;
 //        j++;
 //    }
-//    j = 1;
 //    Console.WriteLine();
 //    i += 3;
 //}
@@ -594,11 +590,12 @@
 //upper = Convert.ToInt32(Console.ReadLine());
 //int sumPrimeNumber = 0;
 ////
-//bool isPrime = true;
 //string eachPrime = "";
 //for (int i = lower; i <= upper; i++)
 //{
+// 需放在for loop內以更新isPrime狀態
 //    if (i >= 2) {
+//      bool isPrime = true;
 //        for (int j = 2; j <= Math.Floor(Math.Sqrt(i)); j++)
 //        {
 //            if (i % j == 0)
@@ -636,6 +633,7 @@
 
 //while (lower <= upper) {
 //    int checkedNumber = 2;
+// while loop內，因為有重新賦值isPrime因此沒問題
 //    isPrime = true;
 
 
@@ -703,7 +701,6 @@
 //    //查看是否為因數
 //    if (input % time == 0) {
 //        // 查看是否為質數
-//        checkedTime = 2;
 //        while (checkedTime <= Math.Sqrt(time)){
 //            isPrime = true;
 //            if (time % checkedTime == 0) {
@@ -939,11 +936,13 @@
 
 //Console.WriteLine("請輸入預計吃漢堡時間(分鐘)：");
 //double timePeriod = Convert.ToDouble(Console.ReadLine());
-//int timeEat = 1;
-//for (int i = 0; i <= timePeriod; i+=5)
+//int timeEat = 0;
+//for (int i = 5; i <= timePeriod; i+=5)
 //{
 //	Console.WriteLine($"Eric於{i}分鐘時吃第{timeEat}次『39元』漢堡");
 //	timeEat++;
+//}
+//if(timePeriod < 5){ Console.WriteLine("1個都吃不完");
 //}
 
 // Q:小明貸款買房花560萬，每個月可還4萬，
@@ -951,17 +950,19 @@
 
 //int loanPaymentTime = 0;
 //int loanTotal = 560;
-//int loanPayment = 4;
+//int loanPaymentEachMonth = 4;
 //int times = 0;
 
 //for (int i = 0; 0 < loanTotal; i++)
 //{
-//	loanTotal -= loanPayment;
-//	times++;
+//    loanTotal -= loanPaymentEachMonth;
+//    times++;
 //    loanPaymentTime++;
-//	if (loanPaymentTime % 12 == 0) {
-//		loanPayment++;
-//	}
+
+//    if (times % 12 == 0)
+//    {
+//        loanTotal--;
+//    }
 //}
 //Console.WriteLine($"小明於第{times}次還清房貸");
 
@@ -970,7 +971,7 @@
 
 ////使用random class
 //Random rnd = new Random();
-//int randomNumber = rnd.Next(1, 100);
+//int randomNumber = rnd.Next(1, 101);
 //int userinput;
 
 //////由於不確定運作次數，使用while loop
